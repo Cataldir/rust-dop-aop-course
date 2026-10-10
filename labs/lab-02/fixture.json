@@ -1,0 +1,1 @@
+{"points":[{"tenant":"demo","metric":"cpu","timestamp":1000,"value":2.0,"tags":{}},{"tenant":"demo","metric":"cpu","timestamp":1999,"value":4.0,"tags":{}},{"tenant":"demo","metric":"cpu","timestamp":2000,"value":8.0,"tags":{}}]}

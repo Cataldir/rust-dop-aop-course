@@ -1,0 +1,2 @@
+# Telemetry variant
+Use the same typed Point, /ingest, /query and tenant middleware. The synthetic fixture uses a bounded device tag. No new database or handler hierarchy is needed. Change the metric query to device_temperature, run the same negative tenant cases, then decide whether per-device authorization is a distinct boundary. The course does not silently equate a valid device tag with authenticated device ownership.

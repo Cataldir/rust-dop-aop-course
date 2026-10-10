@@ -1,0 +1,4 @@
+# Kafka appendix — separate broker exercise
+Requires a learner-local Kafka broker with orders.created topic at loopback 9092 and the same accepted order fixture already in PostgreSQL. It does not substitute for the NATS primary lab. Publish the L3 envelope with your approved Kafka CLI and then run cargo run --manifest-path appendix/kafka-consumer/Cargo.toml. CMake/native librdkafka requirements must be qualified on your OS before use.
+
+The serial reference commits offsets synchronously only after the database effect. A poison record or processing failure stops the consumer with its offset uncommitted; fix/quarantine explicitly and replay. A production group needs a rebalance callback and in-flight partition drain policy before adding parallelism. This educational reference has no claim of production rebalance proof or Kafka exactly-once business effects.

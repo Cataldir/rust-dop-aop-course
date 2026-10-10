@@ -1,0 +1,11 @@
+[package]
+name = "desktop-core"
+version.workspace = true
+edition.workspace = true
+[dependencies]
+shared-kernel = { path = "../shared-kernel" }
+serde.workspace = true
+serde_json.workspace = true
+hecs.workspace = true
+sled.workspace = true
+thiserror.workspace = true

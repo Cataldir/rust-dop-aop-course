@@ -1,0 +1,1 @@
+{"points":[{"tenant":"demo","metric":"device_temperature","timestamp":1000,"value":21.5,"tags":{"device":"sensor-1"}},{"tenant":"demo","metric":"device_temperature","timestamp":2000,"value":22.0,"tags":{"device":"sensor-1"}}]}

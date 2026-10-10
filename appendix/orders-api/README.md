@@ -1,0 +1,2 @@
+# Orders variant
+The real /orders and /orders/{id} routes live in crates/axum-api. They share JWT, request-id, trace, compression and authenticated tenant quota with the primary metrics API. POST writes order + outbox in one PostgreSQL transaction; the separate event dispatcher publishes and marks outbox rows. A repeated key with different units returns conflict. Run the existing API binary and use labs/lab-04-capstone/README.md; do not clone a second implementation.

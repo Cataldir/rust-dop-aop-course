@@ -1,0 +1,4 @@
+[package]
+name = "extras-solutions"
+version.workspace = true
+edition.workspace = true

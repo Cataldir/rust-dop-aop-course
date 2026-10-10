@@ -1,0 +1,23 @@
+# Loopback-only synthetic teaching credentials. Do not deploy this file.
+services:
+  postgres:
+    image: postgres:17.6-bookworm
+    environment:
+      POSTGRES_DB: course_local
+      POSTGRES_USER: course
+      POSTGRES_PASSWORD: course-local-only
+    ports: ["127.0.0.1:5433:5432"]
+    volumes: ["course-pg:/var/lib/postgresql/data"]
+    healthcheck:
+      test: ["CMD-SHELL","pg_isready -U course -d course_local"]
+      interval: 5s
+      timeout: 2s
+      retries: 12
+  nats:
+    image: nats:2.11.8-alpine
+    command: ["-c","/etc/nats/course.conf"]
+    ports: ["127.0.0.1:4222:4222","127.0.0.1:8222:8222"]
+    volumes: ["course-nats:/data","./nats.conf:/etc/nats/course.conf:ro"]
+volumes:
+  course-pg: {}
+  course-nats: {}

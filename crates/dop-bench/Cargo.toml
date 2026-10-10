@@ -1,0 +1,13 @@
+[package]
+name = "dop-bench"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+[dependencies]
+hecs.workspace = true
+wide.workspace = true
+[dev-dependencies]
+criterion.workspace = true
+[[bench]]
+name = "layout"
+harness = false

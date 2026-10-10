@@ -1,0 +1,19 @@
+[package]
+name = "event-svc"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+[dependencies]
+shared-kernel = { path = "../shared-kernel" }
+aspects = { path = "../aspects" }
+async-nats.workspace = true
+tokio.workspace = true
+futures-util.workspace = true
+sqlx.workspace = true
+serde_json.workspace = true
+tracing.workspace = true
+tracing-opentelemetry.workspace = true
+opentelemetry.workspace = true
+sha2.workspace = true
+anyhow.workspace = true
+rkyv = "=0.8.18"

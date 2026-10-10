@@ -1,0 +1,36 @@
+[workspace]
+resolver = "2"
+members = ["crates/shared-kernel", "crates/dop-bench", "crates/aspects", "crates/audit-macro", "crates/axum-api", "crates/event-svc", "crates/desktop-core", "crates/extras-solutions"]
+exclude = ["crates/tauri-app", "appendix/egui-app", "appendix/kafka-consumer", "labs/lab-01/starter", "labs/lab-02/starter", "labs/lab-03/starter", "labs/lab-04-capstone/starter"]
+[workspace.package]
+edition = "2021"
+rust-version = "1.90"
+version = "0.1.0"
+[workspace.dependencies]
+serde = { version = "=1.0.228", features = ["derive"] }
+serde_json = "=1.0.145"
+thiserror = "=2.0.17"
+anyhow = "=1.0.100"
+tokio = { version = "=1.47.1", features = ["full"] }
+axum = { version = "=0.8.6", features = ["ws", "macros"] }
+tower = { version = "=0.5.3", features = ["util", "limit", "timeout"] }
+tower-http = { version = "=0.6.6", features = ["trace", "compression-gzip", "request-id"] }
+tower_governor = "=0.8.0"
+tracing = "=0.1.41"
+tracing-subscriber = { version = "=0.3.23", features = ["env-filter"] }
+tracing-opentelemetry = "=0.32.0"
+opentelemetry = "=0.31.0"
+opentelemetry_sdk = "=0.31.0"
+opentelemetry-otlp = { version = "=0.31.0", features = ["grpc-tonic"] }
+metrics = "=0.24.6"
+metrics-exporter-prometheus = "=0.18.3"
+sqlx = { version = "=0.8.6", features = ["runtime-tokio", "tls-rustls", "postgres", "migrate", "json"] }
+jsonwebtoken = "=9.3.1"
+async-nats = "=0.50.0"
+futures-util = "=0.3.31"
+hecs = "=0.10.5"
+wide = "=0.7.33"
+criterion = "=0.5.1"
+sled = "=0.34.7"
+sha2 = "=0.10.9"
+reqwest = { version = "=0.12.23", default-features = false, features = ["json", "rustls-tls"] }

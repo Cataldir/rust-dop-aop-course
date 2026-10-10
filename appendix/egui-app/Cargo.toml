@@ -1,0 +1,9 @@
+[package]
+name = "course-egui-appendix"
+version = "0.1.0"
+edition = "2021"
+[workspace]
+[dependencies]
+eframe = "=0.32.3"
+desktop-core = { path = "../../crates/desktop-core" }
+sled = "=0.34.7"
